@@ -4,15 +4,16 @@ This repository contains practical implementations of database-driven applicatio
 
 ---
 
-## Catalog of Completed Practical Tasks
+## Catalog of Completed Practical Tasks & Standalone Repositories
 
-| Task # | Practical Title | Key Technologies | Directory Link |
-| :---: | :--- | :--- | :--- |
-| **Task 1** | **Development of Python-Based Employee Management System using SQL/PostgreSQL** | PostgreSQL 18, `psycopg2`, Tabulate, Seaborn | [`AnalysisOf_Employee_Management_System/`](AnalysisOf_Employee_Management_System/) |
-| **Task 2** | **Build Data Pipeline to Work with Databases SQL/PostgreSQL (ETL)** | PostgreSQL 18, SQLAlchemy, Pandas, Logging | [`Build_Data_Pipeline_PostgreSQL/`](Build_Data_Pipeline_PostgreSQL/) |
-| **Task 3** | **Python MongoDB Client & Collection Operations (CRUD, Replace, Aggregate)** | MongoDB 9.0, `pymongo`, Aggregation Pipeline, Seaborn | [`MongoDB_Client_Document_Operations/`](MongoDB_Client_Document_Operations/) |
-| **Task 4** | **Hospital Management System Application Using Python and MongoDB Backend** | MongoDB 9.0, `pymongo`, Relational `$lookup` Joins, Seaborn | [`Hospital_Management_System_MongoDB/`](Hospital_Management_System_MongoDB/) |
-| **Task 5** | **Data Frame Manipulation, Data Cleaning, and Feature Processing using PySpark** | Apache Spark 3.5.3, PySpark MLlib, OpenJDK 17, Parquet | [`Data_Cleaning_Feature_Processing_PySpark/`](Data_Cleaning_Feature_Processing_PySpark/) |
+| Task # | Practical Title | Key Technologies | Local Directory | Standalone GitHub Repository |
+| :---: | :--- | :--- | :--- | :--- |
+| **Task 1** | **Development of Python-Based Employee Management System using SQL/PostgreSQL** | PostgreSQL 18, `psycopg2`, Tabulate, Seaborn | [`AnalysisOf_Employee_Management_System/`](AnalysisOf_Employee_Management_System/) | [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?logo=github)](https://github.com/Vishvambar/Employee-Management-System-PostgreSQL) |
+| **Task 2** | **Build Data Pipeline to Work with Databases SQL/PostgreSQL (ETL)** | PostgreSQL 18, SQLAlchemy, Pandas, Logging | [`Build_Data_Pipeline_PostgreSQL/`](Build_Data_Pipeline_PostgreSQL/) | [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?logo=github)](https://github.com/Vishvambar/Data-Pipeline-ETL-PostgreSQL) |
+| **Task 3** | **Python MongoDB Client & Collection Operations (CRUD, Replace, Aggregate)** | MongoDB 9.0, `pymongo`, Aggregation Pipeline, Seaborn | [`MongoDB_Client_Document_Operations/`](MongoDB_Client_Document_Operations/) | [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?logo=github)](https://github.com/Vishvambar/MongoDB-Client-Document-Operations) |
+| **Task 4** | **Hospital Management System Application Using Python and MongoDB Backend** | MongoDB 9.0, `pymongo`, Relational `$lookup` Joins, Seaborn | [`Hospital_Management_System_MongoDB/`](Hospital_Management_System_MongoDB/) | [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?logo=github)](https://github.com/Vishvambar/Hospital-Management-System-MongoDB) |
+| **Task 5** | **Data Frame Manipulation, Data Cleaning, and Feature Processing using PySpark** | Apache Spark 3.5.3, PySpark MLlib, OpenJDK 17, Parquet | [`Data_Cleaning_Feature_Processing_PySpark/`](Data_Cleaning_Feature_Processing_PySpark/) | [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?logo=github)](https://github.com/Vishvambar/PySpark-Data-Cleaning-Feature-Processing) |
+
 
 ---
 
