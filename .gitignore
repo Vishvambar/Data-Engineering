@@ -3,3 +3,6 @@ __pycache__/
 *$py.class
 *.log
 .DS_Store
+*.crc
+.*.crc
+

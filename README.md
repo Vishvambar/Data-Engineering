@@ -12,6 +12,7 @@ This repository contains practical implementations of database-driven applicatio
 | **Task 2** | **Build Data Pipeline to Work with Databases SQL/PostgreSQL (ETL)** | PostgreSQL 18, SQLAlchemy, Pandas, Logging | [`Build_Data_Pipeline_PostgreSQL/`](Build_Data_Pipeline_PostgreSQL/) |
 | **Task 3** | **Python MongoDB Client & Collection Operations (CRUD, Replace, Aggregate)** | MongoDB 9.0, `pymongo`, Aggregation Pipeline, Seaborn | [`MongoDB_Client_Document_Operations/`](MongoDB_Client_Document_Operations/) |
 | **Task 4** | **Hospital Management System Application Using Python and MongoDB Backend** | MongoDB 9.0, `pymongo`, Relational `$lookup` Joins, Seaborn | [`Hospital_Management_System_MongoDB/`](Hospital_Management_System_MongoDB/) |
+| **Task 5** | **Data Frame Manipulation, Data Cleaning, and Feature Processing using PySpark** | Apache Spark 3.5.3, PySpark MLlib, OpenJDK 17, Parquet | [`Data_Cleaning_Feature_Processing_PySpark/`](Data_Cleaning_Feature_Processing_PySpark/) |
 
 ---
 
@@ -34,31 +35,41 @@ NoSQL document operations on Collection objects: `insert_one`/`insert_many`, `fi
 ---
 
 ## Task 4: Hospital Management System Application (MongoDB Backend)
+Models a complete Hospital Management System across 5 relational-like collections (`departments`, `doctors`, `patients`, `appointments`, `medical_reports`) utilizing multi-stage `$lookup` joins and visual healthcare dashboards.  
+- Directory: [`Hospital_Management_System_MongoDB/`](Hospital_Management_System_MongoDB/)
+- Lab Reports: [`EXPERIMENT_4_REPORT.md`](Hospital_Management_System_MongoDB/EXPERIMENT_4_REPORT.md) | [`OUTPUT_REPORT_SUBMISSION.md`](Hospital_Management_System_MongoDB/OUTPUT_REPORT_SUBMISSION.md)
+
+---
+
+## Task 5: Data Frame Manipulation, Data Cleaning, and Feature Processing (PySpark)
 
 ### Aim & Objectives:
-To design, implement, and demonstrate a Python-based application that models a Hospital Management System utilizing MongoDB as a NoSQL backend database to support full CRUD across relational-like documents:
-1. **Departments**: Hospital wards, locations, and bed counts.
-2. **Doctors**: Specialists, consultation fees, and weekly availability.
-3. **Patients**: Clinical demographics, blood groups, and admission statuses.
-4. **Appointments**: Scheduling, doctor-patient linkage, and status management.
-5. **Medical Reports**: Clinical diagnoses, nested prescription arrays, and lab test results.
-6. **Relational `$lookup` Joins**: Reconstructing unified views and calculating departmental revenues.
-7. **Visual Healthcare Dashboards**: High-resolution charts of department appointment revenues, patient demographic profiles, and hospital executive overview.
+To setup a localized PySpark environment, instantiate a distributed Spark Session, construct structured DataFrames, and perform foundational operations for engineering clean, model-ready data features:
+1. **Explicit Schema Enforcement**: Define `StructType` schemas to bypass costly schema inference passes.
+2. **Distributed Data Cleaning**: Deduplication (`.dropDuplicates()`), string trimming/casing, outlier invalidation & Winsorization.
+3. **Missing Value Imputation**: PySpark MLlib `Imputer` (median strategy for numerical features) and default categorical imputation.
+4. **PySpark ML Pipeline**: 7-stage pipeline combining `StringIndexer`, `OneHotEncoder`, `VectorAssembler`, and `StandardScaler` producing 32-dimensional standardized feature vectors.
+5. **Window Functions & Analytics**: Partition-based ranking (`Window.partitionBy()`), running averages, and cohort aggregations.
+6. **Visual Feature Analytics**: 300 DPI publication-quality charts for missing value resolution, outlier Winsorization, and cohort economics.
 
 ### Quick Start:
 ```bash
-cd "/home/vishvambar/Desktop/Data Visualisation/Data-Engineering/Hospital_Management_System_MongoDB"
+cd "/home/vishvambar/Desktop/Data Visualisation/Data-Engineering/Data_Cleaning_Feature_Processing_PySpark"
 
-# Run automated 100% verification test suite:
-python3 test_all_operations.py
+# Run automated 100% verification test suite with execution benchmarks (47s):
+./run.sh test
 
-# Launch interactive CLI control panel:
-python3 main.py
+# Launch interactive CLI menu:
+./run.sh
 
-# Generate visual healthcare analytics charts:
-python3 visualize_hospital.py
+# Run end-to-end pipeline:
+./run.sh pipeline
+
+# Generate publication-grade visualizations:
+./run.sh vis
 ```
 
 ### Lab Reports:
-- Full Academic Lab Manual: [`EXPERIMENT_4_REPORT.md`](Hospital_Management_System_MongoDB/EXPERIMENT_4_REPORT.md)
-- Printable 1–2 Page Output & Evaluator Viva Report: [`OUTPUT_REPORT_SUBMISSION.md`](Hospital_Management_System_MongoDB/OUTPUT_REPORT_SUBMISSION.md)
+- Full Academic Lab Manual: [`EXPERIMENT_5_REPORT.md`](Data_Cleaning_Feature_Processing_PySpark/EXPERIMENT_5_REPORT.md)
+- Printable 1–2 Page Output & Evaluator Viva Report: [`OUTPUT_REPORT_SUBMISSION.md`](Data_Cleaning_Feature_Processing_PySpark/OUTPUT_REPORT_SUBMISSION.md)
+
